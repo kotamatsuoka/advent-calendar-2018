@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>サンプル</title>
+
+<style>
+    li {
+        margin-left: -50px;
+        border-bottom: 0.5px solid white;
+        width: 100vw;
+        color: white;
+        padding-left: 10px;
+    }
+    .success {
+        background-color: midnightblue;
+    }
+    .failed {
+        background-color: deeppink;
+    }
+</style>
+</head>
+<body>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<h2>フラッシュメッセージを表示できるかな</h2>
+
+{{ username }}
+{{ text }}
+
+<form action="/" method=post>
+    <dl>
+      <dt>ユーザー名:
+      <dd><input type=text name=username>
+      <dt>テキスト:
+      <dd><input type=text name=text>
+    </dl>
+    <p><input type=submit value=Send>
+</form>
+
+</body>
+</html>
