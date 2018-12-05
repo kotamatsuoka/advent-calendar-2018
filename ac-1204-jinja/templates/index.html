@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>サンプル</title>
+</head>
+<body>
+
+<h2>自己紹介</h2>
+
+<h3>{{ username }}</h3>
+
+<h4>誕生日: {{ birth_day.year }}年{{ birth_day.month }}月{{ birth_day.day }}</h4>
+{% if birth_day.month == 12 %}
+    <p>今月、誕生日です！</p>
+{% elif birth_day.month == 11 %}
+    <p>先月、誕生日でした。</p>
+{% endif %}
+
+<h3>好きな女性タレント</h3>
+<ul>
+    {% for actress in actresses %}
+        <li>{{ actress }}さん</li>
+    {% endfor %}
+</ul>
+
+
+<div>2018年のM-1で、一番おもしろかったのは、
+    <p style="font-size:18px; color: midnightblue">{{ comedians | random }}</p>だと思います。
+</div>
+
+</body>
+</html>
