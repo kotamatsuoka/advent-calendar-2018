@@ -6,14 +6,12 @@ class FullName:
     family_name: str
     first_name: str
 
-    def __eq__(self, other):
-        return (self.first_name == other.first_name) and \
-               (self.family_name == other.family_name) and \
-               isinstance(other, FullName)
-
+    def __post_init__(self):
+        if len(self.family_name) > 10:
+            raise Exception("10文字以下にしてください。")
 
 full_name = FullName("matsuoka", "kota")
 print(full_name.family_name, full_name.first_name)
 
-full_name = FullName("tanaka", "hiroshi")
+full_name = FullName("daijoujidani", "hiroshi")
 print(full_name.family_name, full_name.first_name)
