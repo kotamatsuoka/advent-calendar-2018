@@ -12,7 +12,8 @@ class FullName:
                isinstance(other, FullName)
 
 
-full_name1 = FullName("matsuoka", "kota")
-full_name2 = FullName("tanaka", "hiroshi")
-print(full_name1 == full_name1)
-print(full_name1 == full_name2)
+full_name = FullName("matsuoka", "kota")
+print(full_name.family_name, full_name.first_name)
+
+full_name = FullName("tanaka", "hiroshi")
+print(full_name.family_name, full_name.first_name)
