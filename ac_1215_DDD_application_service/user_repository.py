@@ -2,7 +2,7 @@ import uuid
 from abc import ABCMeta, abstractmethod
 from typing import Union, List
 
-from DDD_application_service.user import UserId, Username, User, FullName
+from ac_1215_DDD_application_service.user import UserId, Username, User, FullName
 
 
 class IUserRepository(metaclass=ABCMeta):

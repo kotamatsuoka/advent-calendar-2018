@@ -1,4 +1,4 @@
-from DDD_application_service.user import User
+from ac_1215_DDD_application_service.user import User
 
 
 class UserSummaryModel:
