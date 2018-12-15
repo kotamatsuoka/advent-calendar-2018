@@ -1,13 +1,16 @@
 import uuid
+from abc import ABCMeta, abstractmethod
 from typing import Union
 
-from ac_1214_DDD_test_repository.user import UserId, FullName
+from ac_1214_DDD_test_repository.user import UserId, FullName, Username, User
 
 
-class IUserRepository:
+class IUserRepository(metaclass=ABCMeta):
+    @abstractmethod
     def find(self, username: Username) -> Union[User, None]:
         pass
 
+    @abstractmethod
     def save(self, user: User):
         pass
 

@@ -1,7 +1,7 @@
 import unittest
 
 from ac_1214_DDD_test_repository.in_memory_user_reposiotry import InMemoryUserRepository
-from ac_1214_DDD_test_repository.programn import Program
+from ac_1214_DDD_test_repository.program import Program
 from ac_1214_DDD_test_repository.user import Username
 
 
