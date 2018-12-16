@@ -1,10 +1,10 @@
 import uuid
 from typing import List
 
-from DDD_application_service.user import User, FullName, Username, UserId
-from DDD_application_service.user_repository import IUserRepository
-from DDD_application_service.user_service import UserService
-from DDD_application_service.user_summary_model import UserSummaryModel
+from ac_1215_DDD_application_service.user import User, FullName, Username, UserId
+from ac_1215_DDD_application_service.user_repository import IUserRepository
+from ac_1215_DDD_application_service.user_service import UserService
+from ac_1215_DDD_application_service.user_summary_model import UserSummaryModel
 
 
 class UserApplicationService:

@@ -26,11 +26,11 @@ class TestProgram(unittest.TestCase):
 
     def test_usernameが重複時は保存できない(self):
         with self.assertRaises(ValueError):
-            Program().creat_user("kota", "こうた", "まつい")
+            Program().create_user("kota", "こうた", "まつい")
 
     def test_usernameが重複していない時は保存してそのusernameが一件だけ存在するか(self):
         username = "yuki"
-        Program().creat_user(username, "ゆうき", "まつい")
+        Program().create_user(username, "ゆうき", "まつい")
 
         conn = sqlite3.connect('sample.db')
         c = conn.cursor()

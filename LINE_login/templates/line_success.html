@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user_profile["name"] }}</title>
+</head>
+<body>
+
+<h2>{{ user_profile["name"] }}</h2>
+<h3>ユーザID:{{ user_profile["sub"][:5] }}...</h3>
+<img style="border-radius:50%;width:200px;height: 200px" src="{{ user_profile["picture"] }}"/>
+
+</body>
+</html>

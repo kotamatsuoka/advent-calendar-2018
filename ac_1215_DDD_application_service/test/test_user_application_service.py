@@ -1,8 +1,8 @@
 import unittest
 
-from DDD_application_service.user import Username, UserId
-from DDD_application_service.user_application_service import UserApplicationService
-from DDD_application_service.user_repository import InMemoryUserRepository
+from ac_1215_DDD_application_service.user import Username, UserId
+from ac_1215_DDD_application_service.user_application_service import UserApplicationService
+from ac_1215_DDD_application_service.user_repository import InMemoryUserRepository
 
 
 class TestUserApplicationService(unittest.TestCase):

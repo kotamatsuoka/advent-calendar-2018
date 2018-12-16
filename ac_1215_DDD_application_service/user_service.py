@@ -1,7 +1,7 @@
 from typing import Union
 
-from DDD_application_service.user import User
-from DDD_application_service.user_repository import IUserRepository
+from ac_1215_DDD_application_service.user import User
+from ac_1215_DDD_application_service.user_repository import IUserRepository
 
 
 class UserService:
