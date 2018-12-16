@@ -1,0 +1,4 @@
+<h2>ユーザ一覧</h2>
+{% for user in user_list %}
+    <li>{{ user.id }}: {{ user.first_name }}</li>
+{% endfor %}

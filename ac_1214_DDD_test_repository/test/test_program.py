@@ -9,13 +9,13 @@ class TestProgram(unittest.TestCase):
     def test_usernameが重複時は保存できない(self):
         in_memory_user_repository = InMemoryUserRepository()
         with self.assertRaises(ValueError):
-            Program().creat_user("kota", "こうた", "まつい", in_memory_user_repository)
+            Program().create_user("kota", "こうた", "まつい", in_memory_user_repository)
 
     def test_usernameが重複していない時は保存してそのusernameが一件だけ存在するか(self):
         username = "yuki"
         in_memory_user_repository = InMemoryUserRepository()
 
-        Program().creat_user(username, "ゆうき", "まつい", in_memory_user_repository)
+        Program().create_user(username, "ゆうき", "まつい", in_memory_user_repository)
         actual = in_memory_user_repository.find(Username(username))
 
         self.assertEqual(username, actual.username.value)

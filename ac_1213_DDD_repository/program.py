@@ -6,7 +6,7 @@ from ac_1213_DDD_repository.user_service import UserService
 
 
 class Program:
-    def creat_user(self, username: str, fist_name:str, family_name: str):
+    def create_user(self, username: str, fist_name:str, family_name: str):
         user = User(UserId(str(uuid.uuid4())),
                     Username(username),
                     FullName(fist_name, family_name))
